@@ -1,0 +1,71 @@
+# ============================================================
+# Multimodal RAG Agent — Requirements
+# Modalities: Text (PDFs/docs), Images, Tables, Formulas
+# Stack: HuggingFace local models + LangChain + ChromaDB
+# ============================================================
+
+# --- Core LangChain (updated, non-deprecated) ---
+langchain>=0.2.9
+langchain-core>=0.2.0
+langchain-community>=0.2.9
+langchain-huggingface>=0.0.3       # HuggingFaceEmbeddings
+langchain-chroma>=0.1.0            # Chroma vectorstore (non-deprecated)
+
+# --- Vector Store ---
+chromadb>=0.5.0
+
+# --- Document Parsing ---
+docling>=2.0.0
+accelerate>=0.30.0                 # model loading optimisation
+tokenizers>=0.19.0
+
+# --- PDF & Document Parsing ---
+pypdf>=4.0.0                       # PDF text extraction
+pdfminer.six>=20221105             # Advanced PDF parsing
+python-docx>=1.1.0                 # .docx support
+unstructured>=0.14.0               # Universal document loader
+unstructured[pdf]                  # PDF extras for unstructured
+
+# --- Image Processing ---
+Pillow>=10.0.0                     # Image loading & manipulation
+pytesseract>=0.3.10                # OCR for text in images
+pdf2image>=1.17.0                  # Convert PDF pages to images
+opencv-python-headless>=4.9.0      # Image preprocessing (headless for servers)
+torchvision>=0.17.0                # Vision model support
+
+# --- Table Extraction ---
+camelot-py[cv]>=0.11.0             # Table extraction from PDFs
+tabulate>=0.9.0                    # Table formatting
+pandas>=2.0.0                      # DataFrame handling
+openpyxl>=3.1.0                    # Excel/spreadsheet support
+xlrd>=2.0.1                        # Legacy Excel (.xls) support
+
+# --- Formula & Equation Parsing ---
+sympy>=1.12                        # Symbolic math / equation handling
+latex2mathml>=3.76.0               # LaTeX formula conversion
+# pix2tex>=0.1.2                     # OCR for math equations in images (LatexOCR) - removed due to dependency conflict
+
+# --- IBM Granite (via HuggingFace) ---
+# Models: ibm-granite/granite-3.1-8b-instruct
+#         ibm-granite/granite-3.1-2b-instruct
+#         ibm-granite/granite-vision-3.1-2b-preview (multimodal)
+ibm-watsonx-ai>=1.1.0              # Official IBM WatsonX SDK (optional, for cloud)
+langchain-ibm>=0.1.0               # LangChain IBM integration
+bitsandbytes>=0.43.0               # 4-bit / 8-bit quantization for Granite on GPU
+
+# --- Multimodal Model Support ---
+torch>=2.2.0                       # PyTorch backend
+einops>=0.7.0                      # Tensor ops used by vision models
+timm>=0.9.0                        # Vision model zoo
+
+# --- FastAPI Server (from existing code) ---
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+
+# --- Utilities ---
+python-dotenv>=1.0.0               # .env / HF_TOKEN loading
+numpy>=1.26.0
+tqdm>=4.66.0
+requests>=2.31.0
+httpx>=0.27.0
