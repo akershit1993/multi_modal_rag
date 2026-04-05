@@ -116,8 +116,9 @@ async def get_status():
         supported_files = _rag_setup.get_supported_files()
         total_docs = len(supported_files)
 
+        initialized = _rag_system is not None and getattr(_rag_system, 'answer_generator', None) is not None
         status = StatusResponse(
-            initialized=_rag_system is not None,
+            initialized=initialized,
             data_folder=str(_rag_setup.data_folder),
             supported_files=supported_files,
             total_documents=total_docs,
@@ -273,6 +274,7 @@ def initialize_rag_system():
     except Exception as e:
         logger.error(f"Failed to initialize RAG system: {e}")
         logger.error(traceback.format_exc())
+        _rag_system = None
 
 # ============================================================
 # Error Handlers
