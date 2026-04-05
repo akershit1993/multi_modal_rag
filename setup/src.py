@@ -227,37 +227,61 @@ class IngestionPipeline:
         Returns:
             Chroma: Vector store with all documents
         """
-        print("Starting ingestion pipeline...")
-        
-        # Get files to process
-        files = self.rag_setup.get_supported_files()
-        print(f"Found {len(files)} files to process")
-        
-        # Process each file
-        for filename in tqdm(files, desc="Processing documents"):
-            file_path = self.rag_setup.data_folder / filename
+        try:
+            print("Starting ingestion pipeline...")
             
-            # Extract content
-            extracted = self.extractor.extract_from_document(str(file_path))
-            if not extracted:
-                continue
+            # Get files to process
+            files = self.rag_setup.get_supported_files()
+            print(f"Found {len(files)} files to process")
             
-            # Save extracted data
-            self._save_extracted_data(extracted)
+            if len(files) == 0:
+                print("Warning: No files found to process")
+                return None
             
-            # Chunk the text
-            chunks = self.chunker.chunk_text(
-                extracted['text'],
-                metadata={'source': filename}
-            )
-            self.all_chunks.extend(chunks)
-        
-        # Create vector store
-        print(f"Creating vector store with {len(self.all_chunks)} chunks...")
-        vector_store = self.embeddings_manager.create_vector_store(self.all_chunks)
-        
-        print("Ingestion pipeline completed!")
-        return vector_store
+            # Process each file
+            for filename in tqdm(files, desc="Processing documents"):
+                try:
+                    file_path = self.rag_setup.data_folder / filename
+                    
+                    # Extract content
+                    extracted = self.extractor.extract_from_document(str(file_path))
+                    if not extracted:
+                        print(f"Warning: Could not extract from {filename}")
+                        continue
+                    
+                    # Save extracted data
+                    self._save_extracted_data(extracted)
+                    
+                    # Chunk the text
+                    chunks = self.chunker.chunk_text(
+                        extracted['text'],
+                        metadata={'source': filename}
+                    )
+                    self.all_chunks.extend(chunks)
+                    print(f"Processed {filename}: {len(chunks)} chunks created")
+                except Exception as e:
+                    print(f"Error processing file {filename}: {e}")
+                    continue
+            
+            if len(self.all_chunks) == 0:
+                print("Error: No chunks created from documents")
+                return None
+            
+            # Create vector store
+            print(f"Creating vector store with {len(self.all_chunks)} chunks...")
+            vector_store = self.embeddings_manager.create_vector_store(self.all_chunks)
+            
+            if vector_store is None:
+                print("Error: Vector store creation returned None")
+                return None
+            
+            print("Ingestion pipeline completed!")
+            return vector_store
+        except Exception as e:
+            print(f"Ingestion pipeline error: {e}")
+            import traceback
+            traceback.print_exc()
+            return None
     
     def _save_extracted_data(self, extracted: Dict[str, Any]) -> None:
         """Save extracted data to file."""
@@ -362,10 +386,21 @@ class MultimodalRAG:
     
     def initialize(self) -> None:
         """Initialize the RAG system by running the ingestion pipeline."""
-        self.vector_store = self.ingestion_pipeline.run()
-        self.retrieval_pipeline = RetrievalPipeline(self.vector_store)
-        self.answer_generator = AnswerGenerator(self.retrieval_pipeline)
-        print("RAG system initialized successfully!")
+        try:
+            print("Starting RAG initialization...")
+            self.vector_store = self.ingestion_pipeline.run()
+            
+            if self.vector_store is None:
+                raise ValueError("Vector store creation failed: returned None")
+            
+            self.retrieval_pipeline = RetrievalPipeline(self.vector_store)
+            self.answer_generator = AnswerGenerator(self.retrieval_pipeline)
+            print("RAG system initialized successfully!")
+        except Exception as e:
+            print(f"Error during RAG initialization: {e}")
+            import traceback
+            traceback.print_exc()
+            raise
     
     def query(self, question: str) -> Dict[str, Any]:
         """

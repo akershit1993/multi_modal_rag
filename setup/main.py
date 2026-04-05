@@ -198,10 +198,22 @@ async def query_system(request: QueryRequest):
         logger.info(f"Processing query: {request.question}")
 
         # Query the system
-        result = _rag_system.query(request.question)
+        try:
+            result = _rag_system.query(request.question)
+        except Exception as query_error:
+            logger.error(f"Query execution error: {query_error}", exc_info=True)
+            raise HTTPException(status_code=500, detail=f"Query execution failed: {str(query_error)}")
 
         if result is None:
-            raise HTTPException(status_code=500, detail="Failed to process query")
+            error_msg = "Failed to process query: result is None"
+            logger.error(error_msg)
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        # Check if we have any sources
+        if result['num_sources'] == 0:
+            logger.warning(f"No sources found for query: {request.question}")
+            warning_detail = "No matching documents found in database. Please upload documents and reinitialize."
+            raise HTTPException(status_code=404, detail=warning_detail)
 
         # Format response
         response = QueryResponse(
@@ -213,13 +225,14 @@ async def query_system(request: QueryRequest):
             timestamp=datetime.now().isoformat()
         )
 
+        logger.info(f"Query successful. Found {result['num_sources']} sources.")
         return response
 
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error processing query: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        logger.error(f"Unexpected error processing query: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 @app.post("/reinitialize")
 async def reinitialize_system(background_tasks: BackgroundTasks):
