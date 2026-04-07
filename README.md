@@ -1,50 +1,56 @@
-# multi_modal_rag
-multimodal rag
-### Setup the repo
-### Define folder where all the files to be parsed are kept
-### Step 2: load the files
-### Step 3: extract text separately, extract images separately USING vision LLM and tables separatley and convert tables into mark down file
-### Step 4: chunk the files into smaller pieces and create embeddings for each chunk
-### Step 5: store the embeddings in a vector database and create vector indexes for each file
-### step 6: create an ingestion pipeline to automate the process of loading files, extracting text, images and tables, chunking the files, creating embeddings and storing them in a vector database
-### step 7: create a retrieval pipeline to query the vector database and retrieve relevant chunks of information based on user queries
-### step 8: generate answer to the user query using the retrieved chunks of information and a language model
-### step 9: create a user interface to interact with the retrieval pipeline and display the generated
-### step 10: generate answers to user queries using the retrieved chunks of information and a language model, and display the answers in the user interface
+Problem Statement
+1. Domain Identification
 
-Step 1 web interface
-    Step1.1 Initialize gradion
-    Step1.2 PDF upload section
-    Step 1.3 Question - answer chat interface
-    -create textbox for user interface
-    Step 1.4 lanuch the application- logs error capturing screen
-Step 2- FRont end utilities
-    Step 2.1 Intialize libraries
-    Step 2.2 PDF upload section
+This project is situated within the domain of automotive engineering and vehicle service diagnostics, with a specific focus on passenger vehicle user documentation. The system is designed around the Tata Nexon owner’s manual, which serves as a comprehensive guide for vehicle operation, maintenance, troubleshooting, and safety compliance.
 
+2. Problem Description
 
-Appendix 1- libraries
-#gradio
-#pathlib
+Modern vehicle owner manuals, such as that of the Tata Nexon, are increasingly multimodal and information-dense, comprising structured text, tabular specifications, warning labels, icons, and annotated diagrams. Users—including vehicle owners, service engineers, and field technicians—often struggle to extract precise and actionable information from these manuals efficiently.
 
-Appendix 2- LLMs used
-#ibm-granite
+The key challenges include:
 
-Appendix 3- Prompt templates
-#keeping the context in mind that is generated from my vector searches try to answer my questions concisely
-#keep thte answers bried and to the point
-# remember the following rules at all points of time
-#Rule 1- do not hallucinate or make up facts
-#rule 2- if you can not find answers in the context, reply with unknown
-#rule 3- always reply in a strict json format
-#context:
-#question:
-#answer:
+Fragmented Information: Relevant details for a single query (e.g., “ABS warning light meaning”) may be distributed across multiple sections, combining text explanations, icon legends, and caution tables.
+Multimodal Complexity: Critical insights are embedded in diagrams (e.g., dashboard symbols), tables (e.g., maintenance schedules), and procedural steps (e.g., jump-starting instructions), which are difficult to interpret using traditional text-based search.
+Inefficient Navigation: Users rely on keyword-based search or manual browsing through PDFs, which often leads to incomplete or irrelevant results due to variation in terminology (e.g., “parking brake” vs. “handbrake”).
+Time Sensitivity: In real-world scenarios—such as vehicle breakdowns or warning alerts—users require instant, context-aware answers, not lengthy document exploration.
+3. Why This Problem Is Unique
 
-#Gaurdrail prompt template
-# read the following question from my user and try to answer with three options alone - the options are
-# 1: Relevant
-# 2: Irrelevant
-# 3: Unknown
-# You will only answer question about autumotive engineering fundamentals
-#you will only answer questions that are more technical
+This problem goes beyond generic document question-answering due to several domain-specific complexities:
+
+Technical Terminology and Synonyms: Automotive manuals use standardized yet varied terminology that differs across user expertise levels (owner vs. technician).
+Safety-Critical Information: Misinterpretation of instructions (e.g., towing procedures, brake warnings) can lead to safety risks, making accuracy crucial.
+Multimodal Dependencies: Understanding a concept often requires correlating text with visual elements such as icons, warning lights, or exploded diagrams.
+Structured + Unstructured Mix: Manuals combine structured data (tables, torque specs, maintenance intervals) with unstructured narratives and conditional instructions.
+Contextual Interpretation: Some answers depend on vehicle state or conditions (e.g., “when engine is cold” vs. “during driving”), requiring contextual reasoning rather than simple retrieval.
+
+These characteristics make the problem significantly more complex than standard FAQ systems or plain text retrieval tasks.
+
+4. Why RAG Is the Right Approach
+
+A Retrieval-Augmented Generation (RAG) approach is particularly well-suited for this use case due to the following advantages:
+
+Contextual Retrieval: RAG enables fetching the most relevant sections of the manual (including tables and captions) before generating a response, ensuring that answers are grounded in authoritative content.
+Handling Large Documents: Instead of relying on fine-tuning a model on the entire manual, RAG dynamically retrieves only the necessary portions, improving scalability and efficiency.
+Improved Accuracy and Trustworthiness: By anchoring responses in source documents, RAG reduces hallucinations and provides traceable answers—critical for safety-related queries.
+Multimodal Extension Capability: RAG pipelines can be extended to include embeddings for images, diagrams, and tables, allowing cross-modal retrieval.
+Flexibility Over Alternatives:
+Fine-tuning is costly, less adaptable to document updates, and may not handle multimodal data effectively.
+Keyword Search lacks semantic understanding and fails with synonyms or context-based queries.
+Manual Navigation is slow and inefficient for real-time problem-solving.
+
+Thus, RAG provides the optimal balance between accuracy, scalability, and real-time usability.
+
+5. Expected Outcomes
+
+A successful RAG-based system for the Tata Nexon owner’s manual would enable:
+
+Natural Language Querying: Users can ask questions like:
+“What does the engine warning light indicate?”
+“What is the recommended tyre pressure for highway driving?”
+“How to jump-start the vehicle safely?”
+Multimodal Understanding: The system can interpret and reference diagrams, symbols, and tables to provide comprehensive answers.
+Context-Aware Responses: Answers adapt based on conditions (e.g., driving state, maintenance intervals).
+Faster Decision-Making: Service engineers and users can quickly diagnose issues and follow correct procedures without manual document search.
+Improved User Experience: Reduces dependency on technical expertise by simplifying access to complex information.
+
+Ultimately, this system aims to transform static vehicle documentation into an interactive, intelligent assistant that enhances safety, efficiency, and user satisfaction.
