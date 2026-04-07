@@ -1,5 +1,5 @@
 """
-Pydantic request/response models for Tata Harrier BS6 RAG API.
+Pydantic request/response models for Tata Nexon BS6 RAG API.
 Defines strict data contracts for all endpoints.
 """
 

@@ -1,5 +1,5 @@
 """
-PDF Parser for Tata Harrier BS6 service manuals.
+PDF Parser for Tata Nexon BS6 service manuals.
 Extracts text, tables, and images as separate chunk types.
 """
 

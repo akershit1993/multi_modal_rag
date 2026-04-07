@@ -74,7 +74,7 @@ All 8 test files have been successfully executed and are now PASSING. The system
 - `/src/retrieval/__init__.py`
 
 ### Issue 2: FileNotFoundError
-**Error**: `FileNotFoundError: PDF not found: sample_documents/harrier-bs6-owners-manual.pdf`
+**Error**: `FileNotFoundError: PDF not found: sample_documents/tata-bs6-owners-manual.pdf`
 **Root Cause**: Test files referenced a PDF that doesn't exist
 **Fix**: Updated all test files to use `nexon-2025-owners-manual.pdf`
 - Modified: `tests/reset_and_reingest.py`

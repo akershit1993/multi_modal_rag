@@ -1,5 +1,5 @@
 """
-ChromaDB vector store setup for Tata Harrier BS6 RAG system.
+ChromaDB vector store setup for Tata Nexon BS6 RAG system.
 Manages collection creation, storage, and retrieval.
 """
 

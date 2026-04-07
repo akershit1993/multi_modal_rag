@@ -1,5 +1,5 @@
 """
-Full ingestion pipeline for Tata Harrier BS6 RAG system.
+Full ingestion pipeline for Tata Nexon BS6 RAG system.
 Orchestrates: PDF parsing → VLM image processing → embedding → ChromaDB storage.
 """
 

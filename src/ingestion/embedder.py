@@ -1,5 +1,5 @@
 """
-Embedding module for Tata Harrier BS6 RAG system.
+Embedding module for Tata Nexon BS6 RAG system.
 Converts text chunks to vectors using sentence-transformers.
 """
 

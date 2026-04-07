@@ -1,5 +1,5 @@
 """
-LLM wrapper for Tata Harrier BS6 RAG system.
+LLM wrapper for Tata Nexon BS6 RAG system.
 Sends retrieved chunks + question to OpenRouter LLM and returns answer.
 """
 
@@ -50,7 +50,7 @@ class LLMProcessor:
 
         context = "\n\n".join(context_parts)
 
-        prompt = f"""You are a helpful assistant for Tata Harrier BS6 vehicle owners and service technicians.
+        prompt = f"""You are a helpful assistant for Tata Nexon BS6 vehicle owners and service technicians.
 Answer the question using ONLY the context provided below.
 If the answer is not in the context, say "I could not find this information in the Harrier BS6 manual."
 Always cite the source (file, page number, chunk type) at the end of your answer.

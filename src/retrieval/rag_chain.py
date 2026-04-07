@@ -1,5 +1,5 @@
 """
-RAG chain for Tata Harrier BS6 system.
+RAG chain for Tata Nexon BS6 system.
 Combines retriever + LLM into a single query interface.
 """
 

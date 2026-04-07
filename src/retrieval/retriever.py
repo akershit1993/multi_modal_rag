@@ -1,5 +1,5 @@
 """
-Retriever for Tata Harrier BS6 RAG system.
+Retriever for Tata Nexon BS6 RAG system.
 Searches ChromaDB for relevant chunks given a query embedding.
 """
 

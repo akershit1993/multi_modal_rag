@@ -1,5 +1,5 @@
 """
-VLM wrapper for Tata Harrier BS6 image processing via OpenRouter.
+VLM wrapper for Tata Nexon BS6 image processing via OpenRouter.
 """
 
 import os
@@ -78,7 +78,7 @@ class VLMProcessor:
                                 {
                                     "type": "text",
                                     "text": (
-                                        f"Tata Harrier BS6 manual page {page_number}. "
+                                        f"Tata Nexon BS6 manual page {page_number}. "
                                         f"Describe this image briefly: component names, "
                                         f"locations, symbols, or diagram details visible."
                                     )
