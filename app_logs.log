@@ -1,63 +1,8 @@
-2026-04-05 17:35:37,773 - INFO - ============================================================
-2026-04-05 17:35:37,773 - INFO - Starting Multimodal RAG Web Interface
-2026-04-05 17:35:37,773 - INFO - ============================================================
-2026-04-05 17:35:37,773 - INFO - RAG Interface initialized
-2026-04-05 17:35:37,971 - ERROR - Fatal error during application runtime:
-Traceback (most recent call last):
-  File "/workspaces/multi_modal_rag/setup/app.py", line 372, in main
-    demo = create_gradio_interface()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/multi_modal_rag/setup/app.py", line 282, in create_gradio_interface
-    chatbot = gr.Chatbot(
-              ^^^^^^^^^^^
-  File "/home/codespace/.python/current/lib/python3.12/site-packages/gradio/component_meta.py", line 194, in wrapper
-    return fn(self, **kwargs)
-           ^^^^^^^^^^^^^^^^^^
-TypeError: Chatbot.__init__() got an unexpected keyword argument 'show_copy_button'
-
-2026-04-05 17:35:37,971 - INFO - Multimodal RAG application shut down
-2026-04-05 17:35:37,971 - INFO - ============================================================
-2026-04-05 17:35:38,147 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
-2026-04-05 17:35:38,745 - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
-2026-04-05 17:37:25,498 - INFO - ============================================================
-2026-04-05 17:37:25,498 - INFO - Starting Multimodal RAG Web Interface
-2026-04-05 17:37:25,498 - INFO - ============================================================
-2026-04-05 17:37:25,499 - INFO - RAG Interface initialized
-2026-04-05 17:37:25,676 - ERROR - Fatal error during application runtime:
-Traceback (most recent call last):
-  File "/workspaces/multi_modal_rag/setup/app.py", line 372, in main
-    demo = create_gradio_interface()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/multi_modal_rag/setup/app.py", line 282, in create_gradio_interface
-    chatbot = gr.Chatbot(
-              ^^^^^^^^^^^
-  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/gradio/component_meta.py", line 194, in wrapper
-    return fn(self, **kwargs)
-           ^^^^^^^^^^^^^^^^^^
-TypeError: Chatbot.__init__() got an unexpected keyword argument 'show_copy_button'
-
-2026-04-05 17:37:25,676 - INFO - Multimodal RAG application shut down
-2026-04-05 17:37:25,676 - INFO - ============================================================
-2026-04-05 17:37:25,849 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
-2026-04-05 17:37:26,462 - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
-2026-04-05 17:40:37,495 - INFO - ============================================================
-2026-04-05 17:40:37,495 - INFO - Starting Multimodal RAG Web Interface
-2026-04-05 17:40:37,496 - INFO - ============================================================
-2026-04-05 17:40:37,496 - INFO - RAG Interface initialized
-2026-04-05 17:40:37,667 - ERROR - Fatal error during application runtime:
-Traceback (most recent call last):
-  File "/workspaces/multi_modal_rag/setup/app.py", line 372, in main
-    demo = create_gradio_interface()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/multi_modal_rag/setup/app.py", line 282, in create_gradio_interface
-    chatbot = gr.Chatbot(
-              ^^^^^^^^^^^
-  File "/home/codespace/.python/current/lib/python3.12/site-packages/gradio/component_meta.py", line 194, in wrapper
-    return fn(self, **kwargs)
-           ^^^^^^^^^^^^^^^^^^
-TypeError: Chatbot.__init__() got an unexpected keyword argument 'show_copy_button'
-
-2026-04-05 17:40:37,667 - INFO - Multimodal RAG application shut down
-2026-04-05 17:40:37,667 - INFO - ============================================================
-2026-04-05 17:40:37,831 - INFO - HTTP Request: HEAD https://huggingface.co/api/telemetry/https%3A/api.gradio.app/gradio-initiated-analytics "HTTP/1.1 200 OK"
-2026-04-05 17:40:38,455 - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+127.0.0.1 - - [07/Apr/2026 11:09:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Apr/2026 11:09:19] "GET /interface.html HTTP/1.1" 304 -
+127.0.0.1 - - [07/Apr/2026 11:09:41] "HEAD /interface.html HTTP/1.1" 200 -
+127.0.0.1 - - [07/Apr/2026 11:09:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Apr/2026 11:09:48] "GET /interface.html HTTP/1.1" 304 -
+127.0.0.1 - - [07/Apr/2026 11:12:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Apr/2026 11:12:09] "GET /interface.html HTTP/1.1" 200 -
+127.0.0.1 - - [07/Apr/2026 11:12:20] "GET /interface.html HTTP/1.1" 200 -

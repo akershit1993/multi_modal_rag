@@ -8,7 +8,7 @@ store.reset()
 
 # Re-ingest with VLM on first 20 images
 summary = run_ingestion(
-    "sample_documents/harrier-bs6-owners-manual.pdf",
+    "sample_documents/nexon-2025-owners-manual.pdf",
     process_images=True
 )
 

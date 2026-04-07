@@ -1,5 +1,5 @@
 """
-FastAPI route definitions for Tata Harrier BS6 RAG API.
+FastAPI route definitions for TATA Nexon.
 Implements /health, /ingest, and /query endpoints.
 """
 

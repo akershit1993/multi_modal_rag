@@ -1,0 +1,103 @@
+[0;93m2026-04-07 09:09:03.780149143 [W:onnxruntime:Default, device_discovery.cc:132 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/device:07/VMBUS:01/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename ""5620e0c7-8062-4dce-aeb7-520c7ef76171"" dit not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Resetting vector store...
+VectorStore ready — 0 chunks indexed.
+Vector store reset.
+
+==================================================
+Starting ingestion: sample_documents/nexon-2025-owners-manual.pdf
+==================================================
+
+Step 1: Parsing PDF...
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+Parsed 'nexon-2025-owners-manual.pdf': 2824 total chunks
+  Text: 2247
+  Tables: 119
+  Images: 458
+
+Step 2: Processing images through VLM...
+Processing 20 images through VLM...
+  [1/20] page 2... 
+    Full response: {'id': 'gen-1775552976-c70GCSC3lSHcFoI1wXEN', 'object': 'chat.completion', 'created': 1775552976, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [2/20] page 2... 
+    Full response: {'id': 'gen-1775552982-gRo76s33HITn3Ot9E5zI', 'object': 'chat.completion', 'created': 1775552982, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [3/20] page 3... 
+    Full response: {'id': 'gen-1775552990-I3Fhe0GbFo4f9QcZNDC4', 'object': 'chat.completion', 'created': 1775552990, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [4/20] page 10... 
+    Full response: {'id': 'gen-1775552998-BzC60YqleFiu0vMad6YJ', 'object': 'chat.completion', 'created': 1775552998, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [5/20] page 11... done
+  [6/20] page 12... 
+    Full response: {'id': 'gen-1775553010-HL87TIqS6gdnlJogLZWP', 'object': 'chat.completion', 'created': 1775553010, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [7/20] page 13... 
+    Full response: {'id': 'gen-1775553015-Y0JHhWqamcWx31DN1H1O', 'object': 'chat.completion', 'created': 1775553015, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [8/20] page 15... 
+    Full response: {'id': 'gen-1775553018-GPR1S2nocjUgKB0SiwqI', 'object': 'chat.completion', 'created': 1775553018, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [9/20] page 15... 
+    Full response: {'id': 'gen-1775553096-iRG2wzb3M7UEW2hLyNjv', 'object': 'chat.completion', 'created': 1775553096, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [10/20] page 15... done
+  [11/20] page 16... 
+    Full response: {'id': 'gen-1775553105-EbYwJC8QfkAqo7o2QBrC', 'object': 'chat.completion', 'created': 1775553105, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [12/20] page 20... 
+    Full response: {'id': 'gen-1775553108-7NELs2FACfxFsOjpTqW6', 'object': 'chat.completion', 'created': 1775553108, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [13/20] page 20... done
+  [14/20] page 20... 
+    Full response: {'id': 'gen-1775553120-LEor5N3ifBm2hY5gKsLe', 'object': 'chat.completion', 'created': 1775553120, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [15/20] page 21... done
+  [16/20] page 22... 
+    Full response: {'id': 'gen-1775553140-usJ8b6TOcMIKM8vIJcWr', 'object': 'chat.completion', 'created': 1775553140, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [17/20] page 23... 
+    Full response: {'id': 'gen-1775553148-9fZggver8hhop9r8Je4A', 'object': 'chat.completion', 'created': 1775553148, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [18/20] page 23... 
+    Full response: {'id': 'gen-1775553153-kt2Z0OtQDadOJ1oUOicf', 'object': 'chat.completion', 'created': 1775553153, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [19/20] page 25... 
+    Full response: {'id': 'gen-1775553159-pL8GfkJW922D71Yfwp2n', 'object': 'chat.completion', 'created': 1775553159, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+  [20/20] page 27... 
+    Full response: {'id': 'gen-1775553164-p5WGiKXN5T0A19Sw67q9', 'object': 'chat.completion', 'created': 1775553164, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+done
+VLM processing complete.
+
+Step 3: Generating embeddings...
+Loading embedding model: all-MiniLM-L6-v2
+Embedding model loaded.
+Generating embeddings for 2824 chunks...
+Batches:   0%|          | 0/45 [00:00<?, ?it/s]Batches:   2%|▏         | 1/45 [00:12<09:01, 12.30s/it]Batches:   4%|▍         | 2/45 [00:19<06:38,  9.27s/it]Batches:   7%|▋         | 3/45 [00:22<04:27,  6.36s/it]Batches:   9%|▉         | 4/45 [00:24<03:11,  4.67s/it]Batches:  11%|█         | 5/45 [00:26<02:22,  3.57s/it]Batches:  13%|█▎        | 6/45 [00:27<01:49,  2.80s/it]Batches:  16%|█▌        | 7/45 [00:28<01:30,  2.39s/it]Batches:  18%|█▊        | 8/45 [00:30<01:13,  1.99s/it]Batches:  20%|██        | 9/45 [00:30<00:58,  1.64s/it]Batches:  22%|██▏       | 10/45 [00:32<00:51,  1.48s/it]Batches:  24%|██▍       | 11/45 [00:32<00:44,  1.32s/it]Batches:  27%|██▋       | 12/45 [00:33<00:40,  1.22s/it]Batches:  29%|██▉       | 13/45 [00:34<00:34,  1.07s/it]Batches:  31%|███       | 14/45 [00:35<00:31,  1.02s/it]Batches:  33%|███▎      | 15/45 [00:36<00:31,  1.06s/it]Batches:  36%|███▌      | 16/45 [00:37<00:26,  1.09it/s]Batches:  38%|███▊      | 17/45 [00:38<00:24,  1.13it/s]Batches:  40%|████      | 18/45 [00:38<00:21,  1.27it/s]Batches:  42%|████▏     | 19/45 [00:39<00:18,  1.40it/s]Batches:  44%|████▍     | 20/45 [00:39<00:18,  1.38it/s]Batches:  47%|████▋     | 21/45 [00:40<00:15,  1.53it/s]Batches:  49%|████▉     | 22/45 [00:41<00:14,  1.54it/s]Batches:  51%|█████     | 23/45 [00:42<00:16,  1.31it/s]Batches:  53%|█████▎    | 24/45 [00:42<00:14,  1.47it/s]Batches:  56%|█████▌    | 25/45 [00:43<00:12,  1.61it/s]Batches:  58%|█████▊    | 26/45 [00:43<00:10,  1.77it/s]Batches:  60%|██████    | 27/45 [00:44<00:09,  1.84it/s]Batches:  62%|██████▏   | 28/45 [00:44<00:08,  1.90it/s]Batches:  64%|██████▍   | 29/45 [00:45<00:08,  1.97it/s]Batches:  67%|██████▋   | 30/45 [00:45<00:07,  2.02it/s]Batches:  69%|██████▉   | 31/45 [00:45<00:06,  2.05it/s]Batches:  71%|███████   | 32/45 [00:46<00:06,  2.06it/s]Batches:  73%|███████▎  | 33/45 [00:47<00:06,  1.89it/s]Batches:  76%|███████▌  | 34/45 [00:47<00:05,  1.96it/s]Batches:  78%|███████▊  | 35/45 [00:47<00:04,  2.17it/s]Batches:  80%|████████  | 36/45 [00:48<00:04,  2.18it/s]Batches:  82%|████████▏ | 37/45 [00:48<00:03,  2.45it/s]Batches:  84%|████████▍ | 38/45 [00:48<00:02,  2.83it/s]Batches:  87%|████████▋ | 39/45 [00:49<00:01,  3.16it/s]Batches:  89%|████████▉ | 40/45 [00:49<00:01,  3.45it/s]Batches:  91%|█████████ | 41/45 [00:49<00:01,  3.71it/s]Batches:  93%|█████████▎| 42/45 [00:49<00:00,  3.86it/s]Batches:  96%|█████████▌| 43/45 [00:49<00:00,  4.03it/s]Batches:  98%|█████████▊| 44/45 [00:50<00:00,  3.76it/s]Batches: 100%|██████████| 45/45 [00:50<00:00,  1.12s/it]
+Embeddings generated — shape: (2824, 384)
+
+Step 4: Storing in ChromaDB...
+VectorStore ready — 0 chunks indexed.
+  Indexed batch: 500/2824 chunks
+  Indexed batch: 1000/2824 chunks
+  Indexed batch: 1500/2824 chunks
+  Indexed batch: 2000/2824 chunks
+  Indexed batch: 2500/2824 chunks
+  Indexed batch: 2824/2824 chunks
+
+==================================================
+Ingestion complete!
+  Total chunks indexed: 2824
+  Total in vector store: 2824
+==================================================
+
+
+Summary:
+  filename: sample_documents/nexon-2025-owners-manual.pdf
+  total_chunks: 2824
+  text_chunks: 2247
+  table_chunks: 119
+  image_chunks: 458
+  chunks_indexed: 2824
+  total_indexed: 2824

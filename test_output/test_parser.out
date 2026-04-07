@@ -1,0 +1,17 @@
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+Parsed 'nexon-2025-owners-manual.pdf': 2824 total chunks
+  Text: 2247
+  Tables: 119
+  Images: 458
+
+First text chunk:
+THE WARRANTY ON THIS VEHICLE IS VALID ONLY IF THE DETAILS ARE 
+FILLED, SIGNED AND STAMPED BY THE SELLING DEALER
+
+First table chunk (if any):
+01. INTRODUCTION              Col1 Col2
+                 Know Your Vehicle    1
+
+First image chunk (if any):
+Image found on page 2
+Base64 length: 17891 chars

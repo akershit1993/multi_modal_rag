@@ -1,0 +1,15 @@
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+Parsed 'nexon-2025-owners-manual.pdf': 2824 total chunks
+  Text: 2247
+  Tables: 119
+  Images: 458
+Testing VLM on 2 images...
+
+
+    Full response: {'id': 'gen-1775553511-tFv0rW0Kl86NuDRUUAGm', 'object': 'chat.completion', 'created': 1775553511, 'model': 'nvidia/nemotron-nano-12b-v2-vl:free', 'provider': 'Nvidia', 'system_fingerprint': None, 'choices': [{'index': 0, 'logprobs': None, 'finish_reason': 'length', 'native_finish_reason': 'length', 
+Page 2:
+  [Image page 2 — no content in response]
+
+Page 2:
+  The image displays the dashboard of a Tata Harrier BS6 manual transmission model. On the two leftmost sections of the display, you can see the gear shift indicator, along
+

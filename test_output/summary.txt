@@ -1,0 +1,27 @@
+Test Results Summary:
+
+1. check_llm_models.py: PASSED
+   - Output: Listed available free text models.
+
+2. check_models.py: PASSED
+   - Output: Listed available free vision models.
+
+3. reset_and_reingest.py: FAILED
+   - Error: ModuleNotFoundError: No module named 'src'
+
+4. test_ingestion.py: FAILED
+   - Error: ModuleNotFoundError: No module named 'src'
+
+5. test_parser.py: PASSED
+   - Output: Successfully parsed PDF, showing chunks and samples.
+
+6. test_rag.py: FAILED
+   - Error: ModuleNotFoundError: No module named 'src'
+
+7. test_single.py: FAILED
+   - Error: ModuleNotFoundError: No module named 'src'
+
+8. test_vlm.py: FAILED
+   - Error: ModuleNotFoundError: No module named 'src'
+
+Note: Several tests failed due to import issues. The 'src' module could not be found. This might be resolved by setting PYTHONPATH or running from a different directory.

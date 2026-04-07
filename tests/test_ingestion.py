@@ -3,7 +3,7 @@ from src.ingestion.pipeline import run_ingestion
 # Run without VLM first to test embedding + ChromaDB
 # We will enable VLM during actual API usage
 summary = run_ingestion(
-    "sample_documents/harrier-bs6-owners-manual.pdf",
+    "sample_documents/nexon-2025-owners-manual.pdf",
     process_images=False
 )
 

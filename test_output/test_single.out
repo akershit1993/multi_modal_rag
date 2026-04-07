@@ -1,0 +1,15 @@
+[0;93m2026-04-07 09:29:59.010018905 [W:onnxruntime:Default, device_discovery.cc:132 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/device:07/VMBUS:01/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename ""5620e0c7-8062-4dce-aeb7-520c7ef76171"" dit not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+Model being used: google/gemma-3-12b-it:free
+Waiting 60 seconds for rate limit to reset...
+VectorStore ready — 5648 chunks indexed.
+Loading embedding model: all-MiniLM-L6-v2
+Embedding model loaded.
+LLM using model: google/gemma-3-12b-it:free
+Query: What engine oil grade is recommended for the Kryotec diesel engine?
+Retrieved 3 chunks:
+  [table] page 275 (similarity: 0.5753)
+  [table] page 275 (similarity: 0.5753)
+  [text] page 280 (similarity: 0.514)
+
+Answer:
+I could not find this information in the Harrier BS6 manual.

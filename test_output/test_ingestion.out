@@ -1,0 +1,46 @@
+[0;93m2026-04-07 09:14:18.637655480 [W:onnxruntime:Default, device_discovery.cc:132 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/device:07/VMBUS:01/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename ""5620e0c7-8062-4dce-aeb7-520c7ef76171"" dit not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+
+==================================================
+Starting ingestion: sample_documents/nexon-2025-owners-manual.pdf
+==================================================
+
+Step 1: Parsing PDF...
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+Parsed 'nexon-2025-owners-manual.pdf': 2824 total chunks
+  Text: 2247
+  Tables: 119
+  Images: 458
+
+Step 2: Skipping VLM (process_images=False)
+
+Step 3: Generating embeddings...
+Loading embedding model: all-MiniLM-L6-v2
+Embedding model loaded.
+Generating embeddings for 2824 chunks...
+Batches:   0%|          | 0/45 [00:00<?, ?it/s]Batches:   2%|▏         | 1/45 [00:07<05:12,  7.11s/it]Batches:   4%|▍         | 2/45 [00:13<04:45,  6.65s/it]Batches:   7%|▋         | 3/45 [00:16<03:26,  4.92s/it]Batches:   9%|▉         | 4/45 [00:18<02:35,  3.80s/it]Batches:  11%|█         | 5/45 [00:19<01:58,  2.95s/it]Batches:  13%|█▎        | 6/45 [00:21<01:34,  2.42s/it]Batches:  16%|█▌        | 7/45 [00:22<01:20,  2.13s/it]Batches:  18%|█▊        | 8/45 [00:23<01:07,  1.81s/it]Batches:  20%|██        | 9/45 [00:24<00:54,  1.51s/it]Batches:  22%|██▏       | 10/45 [00:25<00:47,  1.37s/it]Batches:  24%|██▍       | 11/45 [00:26<00:42,  1.26s/it]Batches:  27%|██▋       | 12/45 [00:27<00:37,  1.15s/it]Batches:  29%|██▉       | 13/45 [00:28<00:34,  1.06s/it]Batches:  31%|███       | 14/45 [00:29<00:31,  1.02s/it]Batches:  33%|███▎      | 15/45 [00:30<00:29,  1.03it/s]Batches:  36%|███▌      | 16/45 [00:30<00:25,  1.14it/s]Batches:  38%|███▊      | 17/45 [00:31<00:23,  1.19it/s]Batches:  40%|████      | 18/45 [00:32<00:21,  1.28it/s]Batches:  42%|████▏     | 19/45 [00:33<00:19,  1.36it/s]Batches:  44%|████▍     | 20/45 [00:33<00:16,  1.48it/s]Batches:  47%|████▋     | 21/45 [00:34<00:14,  1.61it/s]Batches:  49%|████▉     | 22/45 [00:34<00:14,  1.56it/s]Batches:  51%|█████     | 23/45 [00:35<00:14,  1.49it/s]Batches:  53%|█████▎    | 24/45 [00:35<00:13,  1.60it/s]Batches:  56%|█████▌    | 25/45 [00:36<00:11,  1.67it/s]Batches:  58%|█████▊    | 26/45 [00:36<00:10,  1.79it/s]Batches:  60%|██████    | 27/45 [00:37<00:09,  1.90it/s]Batches:  62%|██████▏   | 28/45 [00:37<00:08,  1.98it/s]Batches:  64%|██████▍   | 29/45 [00:38<00:08,  1.86it/s]Batches:  67%|██████▋   | 30/45 [00:38<00:07,  2.03it/s]Batches:  69%|██████▉   | 31/45 [00:39<00:06,  2.13it/s]Batches:  71%|███████   | 32/45 [00:39<00:05,  2.20it/s]Batches:  73%|███████▎  | 33/45 [00:40<00:05,  2.15it/s]Batches:  76%|███████▌  | 34/45 [00:40<00:05,  2.08it/s]Batches:  78%|███████▊  | 35/45 [00:41<00:04,  2.25it/s]Batches:  80%|████████  | 36/45 [00:41<00:03,  2.46it/s]Batches:  82%|████████▏ | 37/45 [00:41<00:03,  2.52it/s]Batches:  84%|████████▍ | 38/45 [00:42<00:02,  2.87it/s]Batches:  87%|████████▋ | 39/45 [00:42<00:01,  3.21it/s]Batches:  89%|████████▉ | 40/45 [00:42<00:01,  3.43it/s]Batches:  91%|█████████ | 41/45 [00:42<00:01,  3.31it/s]Batches:  93%|█████████▎| 42/45 [00:43<00:00,  3.58it/s]Batches:  96%|█████████▌| 43/45 [00:43<00:00,  3.76it/s]Batches:  98%|█████████▊| 44/45 [00:43<00:00,  3.95it/s]Batches: 100%|██████████| 45/45 [00:43<00:00,  1.03it/s]
+Embeddings generated — shape: (2824, 384)
+
+Step 4: Storing in ChromaDB...
+VectorStore ready — 2824 chunks indexed.
+  Indexed batch: 500/2824 chunks
+  Indexed batch: 1000/2824 chunks
+  Indexed batch: 1500/2824 chunks
+  Indexed batch: 2000/2824 chunks
+  Indexed batch: 2500/2824 chunks
+  Indexed batch: 2824/2824 chunks
+
+==================================================
+Ingestion complete!
+  Total chunks indexed: 2824
+  Total in vector store: 5648
+==================================================
+
+
+Summary:
+  filename: sample_documents/nexon-2025-owners-manual.pdf
+  total_chunks: 2824
+  text_chunks: 2247
+  table_chunks: 119
+  image_chunks: 458
+  chunks_indexed: 2824
+  total_indexed: 5648

@@ -3,7 +3,7 @@ from src.models.vlm import VLMProcessor
 
 # Parse PDF
 parser = PDFParser()
-chunks = parser.parse("sample_documents/harrier-bs6-owners-manual.pdf")
+chunks = parser.parse("sample_documents/nexon-2025-owners-manual.pdf")
 
 # Get first 2 image chunks only for testing
 image_chunks = [c for c in chunks if c.chunk_type == "image"][:2]

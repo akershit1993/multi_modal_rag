@@ -1,0 +1,78 @@
+[0;93m2026-04-07 09:23:51.738144519 [W:onnxruntime:Default, device_discovery.cc:132 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/device:07/VMBUS:01/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename ""5620e0c7-8062-4dce-aeb7-520c7ef76171"" dit not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+VectorStore ready — 5648 chunks indexed.
+Loading embedding model: all-MiniLM-L6-v2
+Embedding model loaded.
+LLM using model: google/gemma-3-12b-it:free
+
+============================================================
+Query: What are the steps to use the scissor jack safely?
+Retrieved 5 chunks:
+  [text] page 244 (similarity: 0.5672)
+  [text] page 244 (similarity: 0.5672)
+  [text] page 244 (similarity: 0.529)
+  [text] page 244 (similarity: 0.529)
+  [text] page 245 (similarity: 0.502)
+
+Answer:
+Here are the steps to use the scissor jack safely, according to the provided information:
+
+1. Assemble the Jack handle and wheel spanner. (nexon-2025-owners-manual.pdf, page 244, text)
+2. Position the jack vertically and raise it by turning the jack handle clockwise until the jack sits completely on the specified point and the base of the jack lies evenly on the ground. (nexon-2025-owners-manual.pdf, page 244, text)
+3. Lower the jack completely then tighten the wheel nuts diagonally in opposite sequence one by one using wheel spanner. (nexon-2025-owners-manual.pdf, page 245, text)
+
+Sources:
+  page 244 | text | similarity 0.5672
+  page 244 | text | similarity 0.5672
+  page 244 | text | similarity 0.529
+  page 244 | text | similarity 0.529
+  page 245 | text | similarity 0.502
+
+Waiting 10 seconds before next query...
+
+============================================================
+Query: What engine oil grade is recommended for the Kryotec diesel engine?
+Retrieved 5 chunks:
+  [table] page 275 (similarity: 0.5753)
+  [table] page 275 (similarity: 0.5753)
+  [text] page 280 (similarity: 0.514)
+  [text] page 280 (similarity: 0.514)
+  [text] page 273 (similarity: 0.5044)
+Rate limit hit — waiting 20 seconds and retrying...
+
+Answer:
+LLM error after retry: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For mor
+
+Sources:
+  page 275 | table | similarity 0.5753
+  page 275 | table | similarity 0.5753
+  page 280 | text | similarity 0.514
+  page 280 | text | similarity 0.514
+  page 273 | text | similarity 0.5044
+
+Waiting 10 seconds before next query...
+
+============================================================
+Query: What does the TPMS warning light on the dashboard mean?
+Retrieved 5 chunks:
+  [text] page 71 (similarity: 0.7037)
+  [text] page 71 (similarity: 0.7037)
+  [text] page 70 (similarity: 0.7001)
+  [text] page 70 (similarity: 0.7001)
+  [text] page 114 (similarity: 0.6949)
+Rate limit hit — waiting 20 seconds and retrying...
+
+Answer:
+The TPMS warning light can mean several things:
+
+1.  It comes on and blinks for 4 seconds if Tyre Pressure is LOW/HIGH, Tyre temperature is HIGH, or there is Tyre air pressure leakage. After 4 seconds, the symbol will continuously be on until the warning is present.
+2.  It comes on and blinks for 20 seconds if the TPMS system has a fault or if a TPMS sensor is faulty/missing. After 20 seconds, the symbol will continuously be on until the fault is present, and you should take your vehicle to a TATA authorized service center. (nexon-2025-owners-manual.pdf, Page: 114, text)
+
+Additionally, a “—” near all the tyre and tyre symbol will blink if the TPMS system has a fault/missing, and “TPMS ERROR” test warning comes ON for 4 seconds when the TPMS system has a fault. (nexon-2025-owners-manual.pdf, Page: 71, text) Finally, "HI" near to the respective tyre and tyre symbol will blink if the tyre temperature is High. (nexon-2025-owners-manual.pdf, Page: 70, text)
+
+Sources:
+  page 71 | text | similarity 0.7037
+  page 71 | text | similarity 0.7037
+  page 70 | text | similarity 0.7001
+  page 70 | text | similarity 0.7001
+  page 114 | text | similarity 0.6949
